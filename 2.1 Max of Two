@@ -1,5 +1,6 @@
 #Problem: Find the max of two numbers.
-#Step 2: create a max function which returns the higher of two values. 
+
+#Step 1: create a max function which returns the higher of two values. 
 def max(x, y):
   if x > y:
     return x
