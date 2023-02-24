@@ -1,0 +1,15 @@
+#Problem: Find the max of two numbers.
+#Step 2: create a max function which returns the higher of two values. 
+def max(x, y):
+  if x > y:
+    return x
+  else:
+    return y
+
+#Step 2: Take two numbers as user inputs. 
+no_1 = int(input("Type a number"))
+no_2 = int(input("Type another number"))
+
+#Step 3: Output the highest number.
+print("The highest number you entered was: " + str(max(no_1, no_2)))
+
