@@ -1,0 +1,21 @@
+#Problem: Find the largest of three numbers.
+
+#Step 1: create a max function which returns the higher of two values. 
+def max(x, y, z):
+  if x > y:
+    y = x
+  else:
+    y = y
+  if y > z:
+    return y
+  else: 
+    return z
+    
+
+#Step 2: Take three numbers as user inputs. 
+no_1 = int(input("Type a number"))
+no_2 = int(input("Type another number"))
+no_3 = int(input("We just need one more number"))
+
+#Step 3: Output the highest number.
+print("The highest number you entered was: " + str(max(no_1, no_2, no_3)))
