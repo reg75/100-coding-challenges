@@ -1,0 +1,19 @@
+#Problem: Take numbers from a user and show the average of the numbers the user entered.
+
+#Step 1: Ask user how many numbers they want to enter.
+no_inputs = int(input("How many numbers do you want to find the average of?"))
+inputted = 0
+sum = 0
+
+#Step 2: Input this number of numbers and find the sum of inputs.
+while inputted < no_inputs:
+  number = (int(input("Type a number")))
+  sum += number
+  inputted += 1
+  
+
+#Step 3: Find the average
+average = sum / no_inputs
+print("The average of your " + str(no_inputs) + " numbers is: " + str(average))
+
+
