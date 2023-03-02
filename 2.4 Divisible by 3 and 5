@@ -1,0 +1,12 @@
+#Step 1: Take an input from the user.
+number = int(input("Please type a number which is divisible by both 3 and 5."))
+steps = 1
+
+#Step 2: Check if number is divisible by 3 and 5.
+if number % 3 == 0 and number % 5 == 0:
+  print("The numbers from 0 to " + str(number) + " are:")
+  while steps < number:
+    print(steps)
+    steps += 1
+else:
+  print("This number is not divisible by 3 and 5")
