@@ -1,0 +1,21 @@
+#Step 1: Allows user to start creating a list of numbers.
+numberlist = []
+number = int(input("Type a number"))
+numberlist.append(number)
+
+#Step 2: Continues building list. Handles exception and gives user a way to end the loop.
+while number != 0:
+    try:
+      number = int(input("Type another number, or type 0 to find the number of your numbers."))
+      numberlist.append(number)
+    except ValueError:
+      print("Error. This is not a valid integer")
+      
+#Step 3: Iterates through the list, summing all numbers.
+sum = 0
+x = len(numberlist)
+i = 0
+while i < x:
+  sum += numberlist[i]
+  i += 1
+print("The total of the numbers you have entered is: " +str(sum))
