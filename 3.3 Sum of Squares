@@ -1,0 +1,13 @@
+#Problem: Take a number as input. Then get the sum of of the the squares of the number plus all preceding numbers.
+#Step 1: Take a number n as input and create a range of numbers from 0-n 
+n = int(input("Type a number"))
+numberrange = (range(n + 1))
+sum = 0
+
+#Step 2: Finds the sum of the squares of all numbers from 0-n 
+for i in numberrange:
+  i = i**2
+  sum += i
+
+#Step 3: Outputs results.  
+print("The sum of the squares of all numbers from 0 to " + str(n) + " is: " + str(sum))
