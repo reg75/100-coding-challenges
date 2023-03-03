@@ -1,0 +1,18 @@
+#Problem: For a list, find the second smallest number in the list. 
+#Step 1: Allows user to start creating a list of numbers.
+numberlist = []
+number = int(input("Type a number"))
+numberlist.append(number)
+
+#Step 2: Continues building list. Handles exception and gives user a way to end the loop.
+while number != 0:
+    try:
+      number = int(input("Type another number, or type 0 to find out the second smallest number you entered."))
+      numberlist.append(number)
+    except ValueError:
+      print("Error. This is not a valid integer")
+
+#Step 3: Finds and prints the second smallest number from the list. 
+numberlist.remove(min(numberlist)) #removes zero
+numberlist.remove(min(numberlist)) #removes smallest non-zero number
+print("The second smallest number you entered was: " + str(min(numberlist)))
