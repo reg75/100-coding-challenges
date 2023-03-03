@@ -1,0 +1,43 @@
+#Problem: Convert Celsius to Fahrenheit.
+
+#Step 1: Gives user option to convert c-f or f-c).
+c2f = 1.8 #+/-32
+option = int(input("To convert celsius to fahrenheit, type 1. To conver fahrenheit to celsius, type 2. To hear a fun fact about the weather, type 3."))
+
+#Step 2: Calculates and outputs the conversion (rounded).  
+if option == 1:
+  c = (input("Input the temperature in celsius"))
+  f = float(c) * c2f + 32 
+  f_round = round(f, 0)
+  print(str(c) + " celsius is " + str(f_round) + " fahrenheit.")
+elif option == 2:
+  f = (input("Input the temperature in fahrenheit"))
+  c = (float(f) -32 ) / c2f
+  c_round = round(c, 0)
+  print(str(f) + " fahrenheit is " + str(c_round) + " celsius.")
+#Creates a random fun fact.
+elif option == 3:
+  import random
+  fact = random.randint(1,10)
+  if fact == 1:
+    print("Fun Fact: The Fahrenheit scale is named after the physicist Daniel Gabriel Fahrenheit")
+  elif fact == 2:
+    print("Fun Fact: The Celsius scale is based on the freezing and boiling points of water (0 and 100 C).")
+  elif fact == 3:
+    print("Fun Fact: The highest temperature ever recorded was 56.7 C, in Death Valley, California.")
+  elif fact == 4:
+    print("Fun Fact: Antartica is technically a desert! The interior of the continent recieves less than 5cm of precipitation per year.")
+  elif fact == 5:
+    print("Fun Fact: 1 billion tonnes of rain falls on the Earth every minute!")
+  elif fact == 6:
+    print("Fun Fact: A moonbow is when the moon's light is refracted by water droplets to create a rainbow.")
+  elif fact == 7:
+    print("Fun Fact: There is no weather on the moon.")
+  elif fact == 8:
+    print("Fun Fact: The Empire State Building is struck by lightning about 100 times a year.")
+  elif fact == 9:
+    print("Fun Fact: The fastest speed a falling raindrop can hit you is 18 mph.")
+  else:
+    print("Fun Fact: The highest temperature ever recorded in Britain was 40.3°C, in Coningsby, Lincolnshire on July 19 2022.")
+else:
+  print("Sorry, this is not a valid option.")
