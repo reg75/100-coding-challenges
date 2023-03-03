@@ -1,0 +1,19 @@
+#Problem: Convert miles to kilometres. I have expanded on the problem by adding an option to convert from km to miles.
+
+#Step 1: Gives user option to convert m-km or km-m).
+m2km = 1.609344
+option = int(input("To convert miles to km, type 1. To conver km to miles, type 2"))
+
+#Step 2: Calculates and outputs the conversion (rounded to 2 dp). 
+if option == 1:
+  m = (input("Input the number of miles"))
+  km = float(m) * m2km
+  km_round = round(km, 2)
+  print(str(m) + " miles is " + str(km_round) + " kilometres.")
+elif option == 2:
+  km = (input("Input the number of kilometres"))
+  m = float(km) / m2km
+  m_round = round(m, 2)
+  print(str(km) + " kilometres is " + str(m_round) + " miles.")
+else:
+  print("Sorry, this is not a valid option.")
