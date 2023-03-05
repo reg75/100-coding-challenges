@@ -1,0 +1,9 @@
+#Problem: You have $5000 for 2 years with 2% interest per year. Calculate the simple interest you have to pay. 
+#Step 1: Sets up variables
+int_rate = 2
+loan_val = 5000
+loan_dur = 2
+
+#Step 2: Calculates interest and outputs results
+interest = int(loan_val * int_rate / 100 * loan_dur)
+print("There is $" + str(interest) + " interest payable on a loan of $" + str(loan_val) + " borrowed over " + str(loan_dur) + " years at " + str(int_rate) + "%")
