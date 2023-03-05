@@ -1,0 +1,26 @@
+#Convert a binary number to decimal
+#Step 1: Takes a binary number as an input, sets up variables for rest of program.
+x = input("Type any binary number")
+bin_len = len(x)
+value = 1
+digit = -1
+decimal = 0
+
+#Step 2: Converts binary to decimal, handles non-binary inputs
+while bin_len > 0:
+  if(x[digit]) == "1":
+    decimal += value
+    value = value * 2
+    digit -= 1
+    bin_len -= 1
+  elif(x[digit]) == "0":
+    decimal += 0
+    value = value * 2
+    digit -= 1
+    bin_len -= 1
+  else:
+    print("error")
+    break
+
+#Step 3: Outputs the result
+print(x + " as a decimal is: " + str(decimal))
