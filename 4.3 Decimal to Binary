@@ -1,0 +1,16 @@
+#The Problem: Convert a decimal number to binary number. 
+
+#Step 1: Takes an input, set up an exmpty string
+x = int(input("Type a number that you would like converted to binary."))
+deci = x
+bin = ""
+
+#Step 2: Builds binary number as a string, which needs to be reverse to give correct output.
+while deci > 1:
+  bin += str(deci % 2) #Add modulus of 2 to string
+  deci = int((deci - (deci % 2)) / 2)
+bin += str(deci)
+bin = bin[::-1]
+
+#Step 3: Outputs result
+print(str(x) + " in binary is: " + bin)
