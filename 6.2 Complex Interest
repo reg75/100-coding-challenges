@@ -1,0 +1,9 @@
+#Problem: Take money borrowed, interest and duration as input. Then, compute the total amount repayable. 
+#Step 1: Sets up variables
+int_rate = float(input("Enter the interest rate for the loan."))
+loan_val = int(input("Enter the amount borrowed."))
+loan_dur = int(input("Enter the duration of the loan in years."))
+
+#Step 2: Calculates total payable and outputs results
+total = int((loan_val * int_rate / 100 * loan_dur) + loan_val)
+print("There is $" + str(total) + " total payable on a loan of $" + str(loan_val) + " borrowed over " + str(loan_dur) + " years at " + str(int_rate) + "%")
