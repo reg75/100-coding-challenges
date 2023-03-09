@@ -1,0 +1,31 @@
+#Note - the same as 6.3, but using OOP
+#This is not currently working!
+#Step 1: Takes inputs of student name, subject marks
+
+class Student:
+  def __init__ (self, name, maths_mk, eng_mk, sci_mk, lang_mk, hums_mk, mark_set, avg_grade):
+    self.name = input("Input the student's name. ")
+    self.maths_mk = int(input("Input " + name + "'s % score in Maths."))
+    self.eng_mk = int(input("Input " + name + "'s % score in English."))
+    self.sci_mk = int(input("Input " + name + "'s % score in Science."))
+    self.lang_mk = int(input("Input " + name + "'s % score in Languages."))
+    self.hums_mk = int(input("Input " + name + "'s % score in Humanities."))
+    self.markset = [self.maths_mk, self.eng_mk, self.sci_mk, self.lang_mk, self.hums_mk]
+    self.avg_grade = round(sum(self.mark_set) / len(self.mark_set))
+
+  def calc_grade(self):
+    if self.avg_grade < 40:
+      final_grade = "Fail"
+    elif self.avg_grade < 60:
+      final_grade = "Pass"
+    elif self.avg_grade < 75:
+      final_grade = "Merit"
+    elif self.avg_grade < 90:
+      final_grade = "Distinction"
+    else:
+      final_grade = "Double Distinction"
+
+    print(self.name + "'s final grade is: " + self.final_grade + " (Average " + str(self.avg_grade) + "%)")
+
+student1 = Student(input(),input(),input(), input(), input(), input(), input(), input())
+student1.calc_grade
