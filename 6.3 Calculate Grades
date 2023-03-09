@@ -1,0 +1,26 @@
+#Problem: Calculate grade of five subjects. 
+#Step 1: Takes inputs of student name, subject marks
+name = input("Input the student's name. ")
+maths_mk = int(input("Input " + name + "'s % score in Maths."))
+eng_mk = int(input("Input " + name + "'s % score in English."))
+sci_mk = int(input("Input " + name + "'s % score in Science."))
+lang_mk = int(input("Input " + name + "'s % score in Languages."))
+hums_mk = int(input("Input " + name + "'s % score in Humanities."))
+
+#Step 2: Calculates average mark
+mark_set = [maths_mk, eng_mk, sci_mk, lang_mk, hums_mk]
+avg_grade = round(sum(mark_set) / len(mark_set))
+
+#Step 3: Calculates and prints an overall grade. 
+if avg_grade < 40:
+  finalgrade = "Fail"
+elif avg_grade < 60:
+  finalgrade = "Pass"
+elif avg_grade < 75:
+  finalgrade = "Merit"
+elif avg_grade < 90:
+  finalgrade = "Distinction"
+else:
+  finalgrade = "Double Distinction"
+
+print(name + "'s final grade is: " + finalgrade + " (Average " + str(avg_grade) + "%)")
