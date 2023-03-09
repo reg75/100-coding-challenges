@@ -1,0 +1,54 @@
+#Note - the same as 6.3, but using OOP
+#Step 1: Creates a Student class, based on inputs of student name, subject marks
+
+import numpy as np
+studentlist = [[]]
+class Student:
+  def __init__ (self, name, maths_mk, eng_mk, sci_mk, lang_mk, hums_mk, mark_set, avg_grade):
+    self.name = input("Input the student's name. ")
+    self.maths_mk = int(input("Input " + self.name + "'s % score in Maths."))
+    self.eng_mk = int(input("Input " + self.name + "'s % score in English."))
+    self.sci_mk = int(input("Input " + self.name + "'s % score in Science."))
+    self.lang_mk = int(input("Input " + self.name + "'s % score in Languages."))
+    self.hums_mk = int(input("Input " + self.name + "'s % score in Humanities."))
+    self.mark_set = [self.maths_mk, self.eng_mk, self.sci_mk, self.lang_mk, self.hums_mk]
+    self.avg_grade = round(sum(self.mark_set) / len(self.mark_set))
+    self.list_entry = [self.name, self.maths_mk, self.eng_mk, self.sci_mk, self.lang_mk, self.hums_mk, self.avg_grade]
+
+#Step 2: creates a grade calcuation method. 
+  def calc_grade(self):
+    if self.avg_grade < 40:
+      self.final_grade = "Fail"
+    elif self.avg_grade < 60:
+      self.final_grade = "Pass"
+    elif self.avg_grade < 75:
+      self.final_grade = "Merit"
+    elif self.avg_grade < 90:
+      self.final_grade = "Distinction"
+    else:
+      self.final_grade = "Double Distinction"
+
+    print(self.name + "'s final grade is: " + self.final_grade + " (Average " + str(self.avg_grade) + "%)")
+
+#Step 2: creates a grade calcuation method. 
+  def add_list(self):
+    studentlist.append(self.list_entry)
+    
+
+
+#Step 3: Creating instances and outputting results. 
+student1 = Student("", "", "", "", "", "", "", "")
+student1.calc_grade()
+student1.add_list()
+student2 = Student("", "", "", "", "", "", "", "")
+student2.calc_grade()
+student2.add_list()
+
+#Step 3: Create a list
+
+print(studentlist)
+
+np.savetxt("studentdata.csv", 
+           studentlist,
+           delimiter =", ", 
+           fmt ='% s')
